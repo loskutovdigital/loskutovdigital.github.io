@@ -56,12 +56,11 @@
     <div class="visual-note">Based in Purmerend, near Amsterdam · Working across the Netherlands and worldwide</div>
   </div>
 </header>
-<section class="metrics" aria-label="Consulting highlights">
-  <div class="metric"><strong>5+</strong><span>Years in affiliate marketing</span></div>
-  <div class="metric"><strong>ROI</strong><span>Decision-focused analysis</span></div>
-  <div class="metric"><strong>NL</strong><span>Netherlands-based</span></div>
-  <div class="metric"><strong>4</strong><span>Working languages</span></div>
-</section>
+<div class="metrics" id="metricsMarquee" aria-label="Key performance metrics. Drag or swipe horizontally." tabindex="0">
+  <div class="metrics-track" id="metricsTrack">
+    <div class="metrics-group"><div class="metric"><span class="metric-num">5+</span><span class="metric-label">Years in affiliate marketing</span></div><div class="metric"><span class="metric-num">ROI</span><span class="metric-label">Decision-focused analysis</span></div><div class="metric"><span class="metric-num">NL</span><span class="metric-label">Netherlands-based</span></div><div class="metric"><span class="metric-num">4</span><span class="metric-label">Working languages</span></div></div>
+  </div>
+</div>
 <main>
 <section class="section">
   <div class="section-head"><div class="section-num">01 /</div><h2>An audit should produce decisions, not a presentation full of observations.</h2></div>
@@ -104,9 +103,9 @@
       <h2>Contact</h2>
       <p>Describe the business, current traffic or campaign setup, and the decision you need help making.</p>
       <div class="contact-links">
-        <a href="https://t.me/soulofjaguar" rel="noopener">Telegram · @soulofjaguar</a>
-        <a href="mailto:loskutov.adops@gmail.com">loskutov.adops@gmail.com</a>
-        <a href="https://www.linkedin.com/in/loskutov-adops/" rel="noopener">LinkedIn · Illia Loskutov</a>
+        <a href="https://t.me/soulofjaguar" rel="noopener"><span class="contact-link-icon">✈️</span><span class="contact-link-text">Telegram: @soulofjaguar</span></a>
+        <a href="mailto:loskutov.adops@gmail.com"><span class="contact-link-icon">✉️</span><span class="contact-link-text">loskutov.adops@gmail.com</span></a>
+        <a href="https://www.linkedin.com/in/loskutov-adops/" rel="noopener"><span class="contact-link-icon">💼</span><span class="contact-link-text">LinkedIn · Illia Loskutov</span></a>
       </div>
     </div>
     <form class="contact-form" data-contact-form
@@ -128,17 +127,47 @@
   </div>
 </section>
 </main>
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div><div class="footer-title">Loskutov Digital Solutions</div>
-      <div class="footer-copy">KVK 42102908 · VAT NL005495238B30 · Purmerend, Netherlands</div></div>
-    <div class="footer-col"><h3>Expertise</h3><a href="../affiliate-marketing-consultant-netherlands/">Affiliate marketing</a><a href="../media-buying-consultant-netherlands/">Media buying</a><a href="../tracking-postback-setup/">Tracking &amp; postbacks</a></div>
-    <div class="footer-col"><h3>Contact</h3>
-      <a href="mailto:loskutov.adops@gmail.com">loskutov.adops@gmail.com</a>
-      <a href="https://t.me/soulofjaguar">Telegram</a>
-      <a href="https://www.linkedin.com/in/loskutov-adops/">LinkedIn</a>
+<section class="company-details" aria-label="Company details">
+  <div class="company-details-grid">
+    <div>
+      <div class="company-kicker">Company</div>
+      <div class="company-title">Loskutov Digital Solutions</div>
+      <div class="company-copy">
+        Eenmanszaak (ZZP)<br>
+        KVK: 42102908<br>
+        VAT: NL005495238B30<br>
+        Westerweg 60, 1445 AD<br>
+        Purmerend, Netherlands
+      </div>
+    </div>
+    <div>
+      <div class="company-kicker">Services</div>
+      <div class="company-copy">
+        Advertising &amp; Performance Marketing<br>
+        AdOps &amp; Campaign Management<br>
+        Digital Marketing Consulting<br>
+        Tracking &amp; Analytics Implementation<br>
+        Market Research
+      </div>
+    </div>
+    <div>
+      <div class="company-kicker">Contact</div>
+      <div class="company-copy">
+        <a class="email" href="mailto:loskutov.adops@gmail.com">loskutov.adops@gmail.com</a><br>
+        <a class="phone" href="tel:+31620705304">+31 6 20 70 53 04</a><br><br>
+        <span class="company-sbi">SBI Codes: 62200 · 73110 · 73200</span>
+      </div>
     </div>
   </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-name">Loskutov Digital Solutions</div>
+  <div class="footer-copy">KVK 42102908 · VAT NL005495238B30 · Purmerend, Netherlands</div>
+  <ul class="footer-links">
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#expertise">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </footer>
 <script src="../assets/site.js" defer></script>
 </body>

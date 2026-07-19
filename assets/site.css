@@ -444,3 +444,318 @@ main{overflow:hidden}
   .contact-form{padding:28px 20px}
   .footer-grid{grid-template-columns:1fr;gap:32px}
 }
+
+
+/* ================================================================
+   GLOBAL SHELL CONSISTENCY PATCH
+   Header, metrics marquee, contact area, company details and footer
+   intentionally match the main homepage across all SEO landing pages.
+   ================================================================ */
+
+/* Fixed surname/navigation, matching the homepage */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  min-height: 0;
+  padding: 20px 48px;
+  background: transparent;
+  border-bottom: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  mix-blend-mode: multiply;
+}
+.site-nav .logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  color: var(--ink);
+  letter-spacing: -0.5px;
+}
+.breadcrumbs { padding-top: 92px; }
+
+/* Interactive horizontal metrics marquee, matching the homepage */
+.metrics {
+  display: block;
+  grid-template-columns: none;
+  background: var(--ink);
+  color: var(--paper);
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  cursor: grab;
+}
+.metrics.is-dragging { cursor: grabbing; }
+.metrics-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0,0,0);
+}
+.metrics-group {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  flex: 0 0 auto;
+  padding: 28px 32px;
+}
+.metrics .metric {
+  flex: 0 0 auto;
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+}
+.metric-num {
+  display: inline;
+  margin: 0;
+  color: var(--paper);
+  font: 400 36px/1 'DM Serif Display', serif;
+}
+.metric-label {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  font: 400 10px/1.45 'DM Mono', monospace;
+}
+
+/* Contact block, same visual language as homepage */
+#contact.section {
+  padding: 120px 64px;
+  background: var(--paper);
+}
+#contact.section > .contact {
+  width: min(1160px, 100%);
+  max-width: 1160px;
+}
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: 80px;
+  align-items: center;
+}
+.contact-copy { min-width: 0; }
+.contact-copy .eyebrow { margin-bottom: 24px; }
+.contact-copy h2 {
+  margin-bottom: 24px;
+  color: var(--ink);
+  font: 400 clamp(42px,5vw,64px)/1 'DM Serif Display', serif;
+  letter-spacing: -1px;
+}
+.contact-copy p {
+  margin-bottom: 40px;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 0;
+}
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  padding: 16px 20px;
+  border: 1px solid var(--sand);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color .2s, background .2s;
+  overflow-wrap: anywhere;
+}
+.contact-links a:hover {
+  border-color: var(--rust);
+  background: var(--rust-pale);
+  color: var(--text);
+}
+.contact-link-icon {
+  flex: 0 0 auto;
+  font-size: 18px;
+}
+.contact-link-text {
+  min-width: 0;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow-wrap: anywhere;
+  font: 400 11px/1.5 'DM Mono', monospace;
+}
+.contact-form {
+  width: 100%;
+  min-width: 0;
+  padding: 48px;
+  background: var(--cream);
+}
+.contact-form h2 {
+  margin-bottom: 32px;
+  color: var(--ink);
+  font: 400 28px/1.2 'DM Serif Display', serif;
+}
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font: 400 10px/1.4 'DM Mono', monospace;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--sand);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--text);
+  outline: none;
+}
+.form-group textarea { min-height: 132px; resize: vertical; }
+.form-submit {
+  width: 100%;
+  min-height: 52px;
+  border: 0;
+  background: var(--ink);
+  color: var(--paper);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  font: 500 10px/1.3 'DM Mono', monospace;
+}
+.form-submit:hover { background: var(--rust); }
+
+/* Same legal/company block as the homepage */
+.company-details {
+  width: 100%;
+  padding: 60px 64px;
+  overflow: hidden;
+  border-top: 1px solid var(--sand);
+  background: var(--cream);
+}
+.company-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 48px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.company-details-grid > div,
+.company-details-grid a,
+.company-details-grid span {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.company-kicker {
+  margin-bottom: 16px;
+  color: var(--rust);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font: 400 10px/1.4 'DM Mono', monospace;
+}
+.company-title {
+  margin-bottom: 12px;
+  color: var(--ink);
+  font: 400 20px/1.3 'DM Serif Display', serif;
+}
+.company-copy {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+.company-copy a { text-decoration: none; }
+.company-copy .email { color: var(--rust); }
+.company-copy .phone { color: var(--muted); }
+.company-sbi {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font: 400 9px/1.5 'DM Mono', monospace;
+}
+
+/* Same compact black footer as the homepage */
+.site-footer {
+  width: 100%;
+  padding: 40px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+}
+.footer-name {
+  color: var(--paper);
+  font: 400 20px/1.3 'DM Serif Display', serif;
+}
+.site-footer .footer-copy {
+  min-width: 0;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow-wrap: anywhere;
+  font: 400 10px/1.7 'DM Mono', monospace;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font: 400 10px/1.4 'DM Mono', monospace;
+}
+.footer-links a:hover { color: var(--rust); }
+
+@media (max-width: 1024px) {
+  .contact { grid-template-columns: 1fr; }
+  .company-details-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .site-nav { padding: 16px 24px; }
+  .site-nav .nav-links { display: none; }
+  .breadcrumbs { padding-top: 76px; }
+  .metrics-group { gap: 32px; padding: 24px 16px; }
+  #contact.section { padding: 80px 24px; }
+  .contact { gap: 44px; }
+  .contact-form { padding: 32px 20px; }
+  .contact-links a { align-items: flex-start; padding: 15px 16px; }
+  .company-details { padding: 52px 24px; }
+  .company-details-grid { grid-template-columns: 1fr; gap: 36px; }
+  .site-footer {
+    padding: 36px 24px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-name,
+  .site-footer .footer-copy,
+  .footer-links { width: 100%; }
+}
+@media (hover:none), (pointer:coarse) {
+  .metrics { cursor: auto; }
+}
