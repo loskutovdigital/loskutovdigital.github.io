@@ -1,11 +1,11 @@
 {
   "name": "Loskutov Digital Solutions",
   "short_name": "Loskutov",
-  "description": "Affiliate marketing, media buying and performance marketing consulting.",
+  "description": "Affiliate marketing, media buying, AdOps and performance marketing consultancy.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#F5F2EC",
+  "background_color": "#0C0C0A",
   "theme_color": "#0C0C0A",
   "icons": [
     {

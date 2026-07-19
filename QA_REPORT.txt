@@ -1,0 +1,7 @@
+Landing pages: 15
+Sitemap URLs: 16
+Shared CSS exists: True
+Shared JS exists: True
+Portrait exists: True
+Broken local asset/file references: 0
+All relative local asset paths resolved successfully.
