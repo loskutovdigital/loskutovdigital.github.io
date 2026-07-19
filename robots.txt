@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://loskutov.digital/sitemap.xml
